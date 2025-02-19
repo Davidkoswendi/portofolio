@@ -220,19 +220,20 @@ section .content {
 /* Certificates Section */
 .certificates {
     margin-top: 40px;
+    text-align: center; /* Center the text */
 }
 
 .certificates h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: var(--primary-color); /* Use primary color for hover */
-    text-shadow: 1px 1px 10px rgba(252, 166, 31, 0.8); /* Make text-shadow distinct */
+    color: var(--primary-color);
 }
 
 .certificate-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center; /* Center the certificate items */
+    gap: 20px; /* Space between items */
 }
 
 .certificate-item {
@@ -241,8 +242,8 @@ section .content {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33.333% - 20px);
-    text-align: center;
+    width: calc(33.333% - 20px); /* Adjust width as needed */
+    text-align: center; /* Center text inside each certificate item */
 }
 
 .certificate-item:hover {
@@ -295,6 +296,9 @@ section .content {
     .nav-container button {
         display: none;
     }
+    .nav-container .links {
+        display: none; /* Hide links on mobile */
+    }
 
     nav svg {
         display: block;
@@ -315,7 +319,7 @@ section .content {
     }
 
     .content .main-content {
-        max-width: 350px;
+        max-width: 90%;
         align-items: center;
         width: 100%;
     }
@@ -360,7 +364,20 @@ section .content {
         width: 100%; /* Full width on mobile */
         height: 300px; /* Adjust height for mobile */
     }
+    .contact-container {
+        flex-direction: column; /* Stack map and description */
+        align-items: center; /* Center items */
+    }
+
+    #contact form,
+    .contact-info {
+        width: 100%;
+    }
+    .certificate-item {
+        width: calc(100% - 20px); /* Full width for mobile */
+    }
 }
+
 
 /* About Section */
 #about {
@@ -411,21 +428,16 @@ section .content {
     text-shadow: 0 0 15px rgba(252, 166, 31, 0.8);
 }
 
-.services-content h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 30px;
-}
-
 .service-list {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center; /* Center the service items horizontally */
+    align-items: center; /* Center the service items vertically */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between items */
 }
 
 .service-item {
-    width: 300px;
+    width: 300px; /* Fixed width for each service item */
     padding: 20px;
     border-radius: 10px;
     background-color: #f0f0f0;
@@ -590,17 +602,6 @@ section .content {
     margin-right: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-
-    #contact form,
-    .contact-info {
-        width: 100%;
-    }
-}
 /* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 8px;
@@ -680,7 +681,12 @@ section .content {
     color: var(--primary-color);
     text-shadow: 0 0 15px rgba(252, 166, 31, 0.8);
 }
-
+.portfolio-item p {
+    font-size: 1rem; /* Ukuran font untuk deskripsi */
+    color: #ccc; /* Warna teks deskripsi */
+    margin-top: 5px; /* Jarak antara judul dan deskripsi */
+    line-height: 1.5; /* Jarak antar baris */
+}
 .skills-container {
     display: flex;
     justify-content: space-between;
@@ -881,6 +887,10 @@ section .content {
 
     .skills-progress {
         width: 100%;
+    }
+    .skill-item {
+        flex: 1 1 100%; /* Full width for each skill item */
+        max-width: none; /* Remove max-width */
     }
 }
 
@@ -1122,4 +1132,19 @@ section .content {
         border: none;
         box-shadow: none;
     }
+}
+footer {
+    background-color: var(--secondary-color);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 5px 0;
 }

@@ -60,13 +60,14 @@
             </div>
         </div>
         <div class="image">
-        <model-viewer 
-    src="sprunki__black.glb" 
-    alt="3D Model of ASUS ROG Strix Scar 17" 
-    auto-rotate 
-    rotation-per-second="20deg"
-    style="width: 100%; height: 400px;">
-</model-viewer>
+    <model-viewer 
+        src="sprunki__black.glb" 
+        alt="3D Model of ASUS ROG Strix Scar 17" 
+        auto-rotate 
+        rotation-per-second="20deg"
+        style="width: 100%; height: 400px;">
+    </model-viewer>
+</div>
         </div>
     </div>
 </section>
@@ -92,34 +93,38 @@ in the world of technology and web development.</p>
                     <a href="{{ asset('Sertifikat_Pelatihan_Digitalent.pdf') }}" target="_blank" view="Sertifikat_Pelatihan_Digitalent.pdf" class="download-button">View</a>
                 </div>
                 <div class="certificate-item">
-                    <img src="{{ asset('img/certificate2.jpg') }}" alt="Certificate 2">
-                    <a href="{{ asset('img/certificate2.jpg') }}" download="Certificate2.jpg" class="download-button">Download</a>
+                    <img src="{{ asset('img/Sertifikat2.png') }}" alt="Certificate 2">
+                    <a href="{{ asset('Sertifikat_PPLG.pdf') }}" target="_blank" view="Sertifikat_PPLG.jpg" class="download-button">View</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
+<!-- Portfolio Section -->
+<section id="portfolio">
     <div class="portfolio-content">
         <h2 data-aos="fade-up" data-aos-duration="1500">My Portfolio</h2>
         <div class="portfolio-list">
             <div class="portfolio-item" data-aos="flip-left" data-aos-duration="1500">
                 <img src="{{ asset('img/project1.png') }}" alt="Project 1">
                 <h3>Registration Form Creation</h3>
+                <p>This project involved creating a user-friendly registration form with validation and responsive design.</p>
             </div>
             <div class="portfolio-item" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="200">
                 <img src="{{ asset('img/project2.png') }}" alt="Project 2">
                 <h3>Portfolio Creation</h3>
+                <p>A personal portfolio website showcasing my skills, projects, and experiences in a visually appealing manner.</p>
             </div>
             <div class="portfolio-item" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="400">
                 <img src="{{ asset('img/project3.png') }}" alt="Project 3">
                 <h3>Online Store</h3>
+                <p>This project is an e-commerce platform that allows users to browse products, add them to a cart, and make purchases.</p>
             </div>
             <div class="portfolio-item" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="600">
                 <img src="{{ asset('img/project4.png') }}" alt="Project 4">
                 <h3>Cinema Website</h3>
+                <p>A cinema website that provides information about movies, showtimes, and allows users to book tickets online.</p>
             </div>
         </div>
     </div>
@@ -289,6 +294,12 @@ in the world of technology and web development.</p>
         </div>
     </div>
 </section>
+<footer>
+        <div class="footer-content">
+            <p>&copy; 2025 David Koswendi.</p>
+            <p>Thank you for visiting my website!</p>
+        </div>
+    </footer>
 <!-- Notification Popup -->
 <div id="notification" class="notification hidden">
     <span id="notification-message">Message sent successfully!</span>
