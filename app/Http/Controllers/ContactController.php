@@ -14,14 +14,21 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
+        // Validate the request
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'message' => 'required|string',
         ]);
-
-        Contact::create($request->all());
-
-        return redirect()->back()->with('success', 'Message sent successfully!');
+    
+        // Create a new contact entry
+        $contact = new Contact();
+        $contact->name = $request->input('name');
+        $contact->email = $request->input('email');
+        $contact->message = $request->input('message');
+        $contact->save(); // Save to the database
+    
+        // Return a JSON response
+        return response()->json(['success' => true]);
     }
 }
